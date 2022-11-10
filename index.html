@@ -39,6 +39,8 @@
     <br><br> 
     Name: <input name="fullname" required="" size="75" type="text"/> 
     <br><br> 
+    Address: <input name="address" required="" size="75" type="text"/> 
+    <br><br>
     Email: <input name="email" required="" size="75" type="email"/> 
     <br><br>
     Phone Number: <input name="phoneNumber" id="phoneNumberValue" required="" size="75" type="tel"/> 
@@ -76,6 +78,7 @@
         var form = e.target;
         var email = form["email"].value;
         var fullname = form["fullname"].value;
+        var address = form["address"].value;
         var phoneNumber = form["phoneNumber"].value;
         var destination = form["destination"].value;
         var details = form["details"].value;
@@ -84,6 +87,7 @@
         var user = {
             email: email, 
             name: fullname, 
+            address: address,
             phone_number: phoneNumber,
             destination: destination, 
             details: details,
@@ -98,6 +102,7 @@
         analytics.identify(getRandomInt(1000000), {
             email: email, 
             name: fullname,
+            address: address,
             phone_number: phoneNumber
         });
         

@@ -1,79 +1,166 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
-  
-<head> 
-<title>Home Questionnaire</title> 
-<span id="selection-marker-1" class="redactor-selection-marker"></span>
-<link rel="stylesheet" type="text/css" href="index.css" />
-<script type="module" src="/name.js"></script>
-<script>
-  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var key=analytics.methods[e];analytics[key]=analytics.factory(key)}analytics.load=function(key,e){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=e};analytics._writeKey="Ld2zb70WP8HjxTjjCBTeHVoRfrMpLGr2";;analytics.SNIPPET_VERSION="4.15.3";
-  analytics.load("Ld2zb70WP8HjxTjjCBTeHVoRfrMpLGr2");
-  analytics.page();
-  }}();
-</script>
-<!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-KNJH4HB');</script>
-<!-- End Google Tag Manager -->
-</head> 
-
-<body>
-<!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KNJH4HB"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) --> 
-<h1>Booking Your Dream Vacation</h1> 
-<p>Fill in all fields below to finalize your booking.</p>  
-<form name="travel" onsubmit="identify(event)">
-     Where:
-    <input name="destination" required="" size="81" type="text"/> 
-    <br><br><br> 
-    Any desired recommendations we can help with (cool things to do, places to visit or restaurants to eat)? 
-    <br><br> 
-    <textarea cols="81" name="details" required="" rows="10">
-    </textarea> 
-    <br><br> 
-    Name: <input name="fullname" required="" size="75" type="text"/> 
-    <br><br> 
-    Address: <input name="address" required="" size="75" type="text"/> 
-    <br><br>
-    Email: <input name="email" required="" size="75" type="email"/> 
-    <br><br>
-    Phone Number: <input name="phoneNumber" id="phoneNumberValue" required="" size="75" type="tel"/> 
-    <br><br>
-    Credit Card Number: <input name="creditCardNumber" id="creditCardNumberValue" required="" size="75" type="text"/> 
-    <br><br>
-    Price: <input name="price" id="priceValue" required="" size="75" type="number"/>
-    <script type="text/javascript">
-      function getRandomPhoneNum() {
-        return Math.floor(100000000 + Math.random() * 900000000);
-      }
-
-      function getRandomCreditCardNum() {
-        return Math.floor(1000000000000000 + Math.random() * 9000000000000000);
-      }
-      
-      function getRandomInt(min, max) {
-        min = Math.ceil(min);
-        max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
-      }
-
-      document.getElementById("phoneNumberValue").value = getRandomPhoneNum();
-      document.getElementById("creditCardNumberValue").value = getRandomCreditCardNum();
-      document.getElementById("priceValue").value = getRandomInt(200, 15000);
+  <head>
+    <title>Home Questionnaire</title>
+    <span id="selection-marker-1" class="redactor-selection-marker"></span>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <script type="module" src="/name.js"></script>
+    <!-- a.js -->
+    <script>
+      !(function () {
+        var analytics = (window.analytics = window.analytics || []);
+        if (!analytics.initialize)
+          if (analytics.invoked)
+            window.console &&
+              console.error &&
+              console.error("Segment snippet included twice.");
+          else {
+            analytics.invoked = !0;
+            analytics.methods = [
+              "trackSubmit",
+              "trackClick",
+              "trackLink",
+              "trackForm",
+              "pageview",
+              "identify",
+              "reset",
+              "group",
+              "track",
+              "ready",
+              "alias",
+              "debug",
+              "page",
+              "once",
+              "off",
+              "on",
+              "addSourceMiddleware",
+              "addIntegrationMiddleware",
+              "setAnonymousId",
+              "addDestinationMiddleware",
+            ];
+            analytics.factory = function (e) {
+              return function () {
+                var t = Array.prototype.slice.call(arguments);
+                t.unshift(e);
+                analytics.push(t);
+                return analytics;
+              };
+            };
+            for (var e = 0; e < analytics.methods.length; e++) {
+              var key = analytics.methods[e];
+              analytics[key] = analytics.factory(key);
+            }
+            analytics.load = function (key, e) {
+              var t = document.createElement("script");
+              t.type = "text/javascript";
+              t.async = !0;
+              t.src =
+                "https://cdn.segment.com/analytics.js/v1/" +
+                key +
+                "/analytics.min.js";
+              var n = document.getElementsByTagName("script")[0];
+              n.parentNode.insertBefore(t, n);
+              analytics._loadOptions = e;
+            };
+            analytics._writeKey = "Ld2zb70WP8HjxTjjCBTeHVoRfrMpLGr2";
+            analytics.SNIPPET_VERSION = "4.15.3";
+            analytics.load("Ld2zb70WP8HjxTjjCBTeHVoRfrMpLGr2");
+            analytics.page();
+          }
+      })();
     </script>
-    <br><br>
-    <input name="submit" type="submit" value="submit"/>
-</form> 
-    
-<script type="text/javascript">
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-KNJH4HB");
+    </script>
+    <!-- End Google Tag Manager -->
+  </head>
 
-      function identify(e){
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-KNJH4HB"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <h1>Booking Your Dream Vacation</h1>
+    <p>Fill in all fields below to finalize your booking.</p>
+    <form name="travel" onsubmit="identify(event)">
+      Where:
+      <input name="destination" required="" size="81" type="text" />
+      <br /><br /><br />
+      Any desired recommendations we can help with (cool things to do, places to
+      visit or restaurants to eat)?
+      <br /><br />
+      <textarea cols="81" name="details" required="" rows="10"> </textarea>
+      <br /><br />
+      Name: <input name="fullname" required="" size="75" type="text" />
+      <br /><br />
+      Address: <input name="address" required="" size="75" type="text" />
+      <br /><br />
+      Email: <input name="email" required="" size="75" type="email" />
+      <br /><br />
+      Phone Number:
+      <input
+        name="phoneNumber"
+        id="phoneNumberValue"
+        required=""
+        size="75"
+        type="tel"
+      />
+      <br /><br />
+      Credit Card Number:
+      <input
+        name="creditCardNumber"
+        id="creditCardNumberValue"
+        required=""
+        size="75"
+        type="text"
+      />
+      <br /><br />
+      Price:
+      <input name="price" id="priceValue" required="" size="75" type="number" />
+      <script type="text/javascript">
+        function getRandomPhoneNum() {
+          return Math.floor(100000000 + Math.random() * 900000000);
+        }
+
+        function getRandomCreditCardNum() {
+          return Math.floor(
+            1000000000000000 + Math.random() * 9000000000000000
+          );
+        }
+
+        function getRandomInt(min, max) {
+          min = Math.ceil(min);
+          max = Math.floor(max);
+          return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+        }
+
+        document.getElementById("phoneNumberValue").value = getRandomPhoneNum();
+        document.getElementById("creditCardNumberValue").value =
+          getRandomCreditCardNum();
+        document.getElementById("priceValue").value = getRandomInt(200, 15000);
+      </script>
+      <br /><br />
+      <input name="submit" type="submit" value="submit" />
+    </form>
+
+    <script type="text/javascript">
+      function identify(e) {
         e.preventDefault();
         var form = e.target;
         var email = form["email"].value;
@@ -85,50 +172,47 @@
         var creditCardNumber = form["creditCardNumber"].value;
         var price = form["price"].value;
         var user = {
-            email: email, 
-            name: fullname, 
-            address: address,
-            phone_number: phoneNumber,
-            destination: destination, 
-            details: details,
-            creditCardNumber: creditCardNumber,
-            price: price
+          email: email,
+          name: fullname,
+          address: address,
+          phone_number: phoneNumber,
+          destination: destination,
+          details: details,
+          creditCardNumber: creditCardNumber,
+          price: price,
         };
 
         function getRandomInt(max) {
           return Math.floor(Math.random() * max);
         }
-        
+
         analytics.identify(getRandomInt(1000000), {
-            email: email, 
-            name: fullname,
-            address: address,
-            phone_number: phoneNumber
+          email: email,
+          name: fullname,
+          address: address,
+          phone_number: phoneNumber,
         });
-        
+
         analytics.track("Order Completed", {
-            title: "Purchased Trip",
-            destination: destination,
-            details: details,
-            credit_card_number: creditCardNumber,
-            price: price
-          }
-        );        
-        
-        analytics.page("Form Page", "Home", {utm: "www.formdestination.com"});
-        
+          title: "Purchased Trip",
+          destination: destination,
+          details: details,
+          credit_card_number: creditCardNumber,
+          price: price,
+        });
+
+        analytics.page("Form Page", "Home", { utm: "www.formdestination.com" });
+
         analytics.group("0e8c78ea9d97a7b8185e8633", {
           name: "Greater Biz, Inc.",
           industry: "Technology",
           employees: 343,
           plan: "enterprise",
-          total_billed: 880
+          total_billed: 880,
         });
 
-
-        
         //analytics.alias("3456");
-        
+
         //         [[SEGAnalytics sharedAnalytics] screen:@"Home"
         //                             properties:@{ @"Feed Type": @"private" }];
 
@@ -137,9 +221,7 @@
 
         // analytics.track('destination submitted', user, function() {
         //     window.location.href = "";
-            
       }
-</script>
-
-</body> 
+    </script>
+  </body>
 </html>
